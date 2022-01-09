@@ -9,8 +9,35 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        TabView {
+            
+            NavigationView {
+                
+                List {
+                    NavigationLink("To-Do", destination: ToDoView())
+                    NavigationLink("Erinnerungen", destination: ToDoView())
+                    NavigationLink("Trainingsplan", destination: ToDoView())
+                    NavigationLink("Haushalt", destination: ToDoView())
+                }
+                .listStyle(GroupedListStyle())
+                .navigationTitle("Start")
+                
+                
+                
+            }
+            .tabItem{
+                Image(systemName: "1.square.fill")
+                Text("Start")
+                
+            }
+            Text("Kommt noch")
+                .tabItem{
+                    Image(systemName: "1.square.fill")
+                    Text("Einstellungen")
+                }
+            
+        }
     }
 }
 
