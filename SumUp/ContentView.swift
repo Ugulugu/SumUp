@@ -10,34 +10,31 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        TabView {
+        NavigationView {
             
-            NavigationView {
-                
-                List {
-                    NavigationLink("To-Do", destination: ToDoView())
-                    NavigationLink("Erinnerungen", destination: ToDoView())
-                    NavigationLink("Trainingsplan", destination: ToDoView())
-                    NavigationLink("Haushalt", destination: ToDoView())
-                }
-                .listStyle(GroupedListStyle())
-                .navigationTitle("Start")
-                
-                
-                
+            List {
+                NavigationLink("Trainingstagebuch", destination: TrainingLogView())
+                //NavigationLink("To-Do", destination: ToDoView())
+                //NavigationLink("Erinnerungen", destination: ToDoView())
+                //NavigationLink("Haushalt", destination: ToDoView())
             }
-            .tabItem{
-                Image(systemName: "1.square.fill")
-                Text("Start")
-                
-            }
-            Text("Kommt noch")
-                .tabItem{
-                    Image(systemName: "1.square.fill")
-                    Text("Einstellungen")
-                }
+            .listStyle(GroupedListStyle())
+            .navigationTitle("Start")
+            
+            
             
         }
+        .tabItem{
+            Image(systemName: "1.square.fill")
+            Text("Start")
+            
+        }
+        Text("Kommt noch")
+            .tabItem{
+                Image(systemName: "1.square.fill")
+                Text("Einstellungen")
+            }
+        
     }
 }
 
