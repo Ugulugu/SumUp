@@ -25,6 +25,7 @@ struct SingleExerciseView: View {
                 Text(exercise.thirdSet)
                     .font(.body)
                     .foregroundColor(.secondary)
+                
             }
         }
     }

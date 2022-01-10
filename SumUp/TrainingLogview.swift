@@ -11,7 +11,7 @@ struct TrainingLogView: View {
                 ForEach(exercises) {
                     exercise in
                     
-                    NavigationLink(destination: Text("Nächste Seite")) {
+                    NavigationLink(destination: TestView()) {
                         SingleExerciseView(exercise: exercise)
                     }
                 }
@@ -19,6 +19,13 @@ struct TrainingLogView: View {
         }
         .listStyle(GroupedListStyle())
         .navigationTitle("Übungen")
+        .navigationBarItems(trailing:
+                                Button(action: {},
+                                       label: {
+            Image(systemName: "plus.circle.fill")
+            Text("Add")
+        }
+                                      ))
     }
 }
 

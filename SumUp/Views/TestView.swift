@@ -6,7 +6,7 @@ struct TestView: View {
         VStack {
             
             List {
-                Text("Zweite Reihe")
+                Text("TestView")
             }
         }
     }
