@@ -15,6 +15,7 @@
 		506DB1C3278AF5FC00CEC1A5 /* TrainingLogview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB1C2278AF5FC00CEC1A5 /* TrainingLogview.swift */; };
 		506DB1C5278B206100CEC1A5 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB1C4278B206100CEC1A5 /* TestView.swift */; };
 		506DB1C9278B6C3000CEC1A5 /* SingleExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB1C8278B6C3000CEC1A5 /* SingleExerciseView.swift */; };
+		506DB1CB278C728500CEC1A5 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB1CA278C728500CEC1A5 /* ExerciseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		506DB1C2278AF5FC00CEC1A5 /* TrainingLogview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingLogview.swift; sourceTree = "<group>"; };
 		506DB1C4278B206100CEC1A5 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestView.swift; path = Views/TestView.swift; sourceTree = "<group>"; };
 		506DB1C8278B6C3000CEC1A5 /* SingleExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleExerciseView.swift; sourceTree = "<group>"; };
+		506DB1CA278C728500CEC1A5 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 		506DB1A6278AE7FA00CEC1A5 = {
 			isa = PBXGroup;
 			children = (
+				506DB1CA278C728500CEC1A5 /* ExerciseView.swift */,
 				506DB1B1278AE7FA00CEC1A5 /* SumUp */,
 				506DB1B0278AE7FA00CEC1A5 /* Products */,
 			);
@@ -154,6 +157,7 @@
 				506DB1C9278B6C3000CEC1A5 /* SingleExerciseView.swift in Sources */,
 				506DB1C3278AF5FC00CEC1A5 /* TrainingLogview.swift in Sources */,
 				506DB1C1278AF1E000CEC1A5 /* ToDoView.swift in Sources */,
+				506DB1CB278C728500CEC1A5 /* ExerciseView.swift in Sources */,
 				506DB1B3278AE7FA00CEC1A5 /* SumUpApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

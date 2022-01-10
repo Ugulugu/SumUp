@@ -14,13 +14,13 @@ struct ContentView: View {
             
             List {
                 NavigationLink("Trainingstagebuch", destination: TrainingLogView())
-                //NavigationLink("To-Do", destination: ToDoView())
+                NavigationLink("Go to TestView", destination: TestView())
                 //NavigationLink("Erinnerungen", destination: ToDoView())
                 //NavigationLink("Haushalt", destination: ToDoView())
+                    .navigationTitle("Start")
+
             }
-            .listStyle(GroupedListStyle())
-            .navigationTitle("Start")
-            
+            .listStyle(GroupedListStyle())            
             
             
         }
@@ -40,6 +40,11 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+                .preferredColorScheme(.light)
+            ContentView()
+                .preferredColorScheme(.dark)
+        }
     }
 }

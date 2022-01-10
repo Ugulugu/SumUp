@@ -1,26 +1,24 @@
 import SwiftUI
 
 struct TrainingLogView: View {
+    
+    @State var exercises: [TrainingExerciseModel] = dummyTrainingsExerciseModel
+    
     var body: some View
     {
-        
-        let exercises: [TrainingExerciseModel] = dummyTrainingsExerciseModel
-        
-        NavigationView {
-            List {
-                ForEach(exercises) {
-                    exercise in
-                    
-                    NavigationLink(destination: TestView()) {
-                        SingleExerciseView(exercise: exercise)
-                    }
+        List {
+            ForEach(exercises) {
+                exercise in
+                
+                NavigationLink(destination: ExerciseView(exercise: exercise)) {
+                    SingleExerciseView(exercise: exercise)
                 }
             }
         }
-        .listStyle(GroupedListStyle())
         .navigationTitle("Übungen")
+        .listStyle(GroupedListStyle())
         .navigationBarItems(trailing:
-                                Button(action: {},
+                                Button(action: {exercises.append(TrainingExerciseModel.dummyExercise)},
                                        label: {
             Image(systemName: "plus.circle.fill")
             Text("Add")
@@ -43,6 +41,7 @@ struct TrainingExerciseModel: Identifiable {
     var firstSet: String
     var secondSet: String
     var thirdSet: String
+    var test: Float
 }
 
 extension TrainingExerciseModel {
@@ -51,19 +50,29 @@ extension TrainingExerciseModel {
         name: "ButterFly",
         firstSet: "30",
         secondSet: "30",
-        thirdSet: "30")
+        thirdSet: "30",
+        test: 7.5)
     
     static var exercise2 = TrainingExerciseModel(
         name: "Bankdrücken",
         firstSet: "30",
         secondSet: "30",
-        thirdSet: "30")
+        thirdSet: "30",
+        test: 7.5)
     
     static var exercise3 = TrainingExerciseModel(
         name: "Dips",
         firstSet: "30",
         secondSet: "30",
-        thirdSet: "30")
+        thirdSet: "30",
+        test: 7.5)
+    
+    static var dummyExercise = TrainingExerciseModel(
+        name: "Dummy",
+        firstSet: "Satz1",
+        secondSet: "Satz2",
+        thirdSet: "Satz3",
+        test: 0.0)
 }
 
 let dummyTrainingsExerciseModel = [TrainingExerciseModel.exercise1,

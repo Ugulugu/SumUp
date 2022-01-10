@@ -25,7 +25,9 @@ struct SingleExerciseView: View {
                 Text(exercise.thirdSet)
                     .font(.body)
                     .foregroundColor(.secondary)
-                
+                Text(String(exercise.test))
+                    .font(.body)
+                    .foregroundColor(.secondary)
             }
         }
     }
@@ -35,7 +37,7 @@ struct SingleExerciseView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             SingleExerciseView(exercise: TrainingExerciseModel.exercise1)
-                .previewLayout(.sizeThatFits)
+                
             SingleExerciseView(exercise: TrainingExerciseModel.exercise1)
                 .previewLayout(.sizeThatFits)
                 .preferredColorScheme(.dark)
