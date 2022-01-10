@@ -15,6 +15,7 @@ struct TestView: View {
             Button(action: {print("username")}) {
                 Label("Add Folder", systemImage: "folder.badge.plus")
             }
+            .navigationTitle("Testview")
         }
         
         
