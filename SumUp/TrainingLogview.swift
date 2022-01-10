@@ -4,6 +4,8 @@ struct TrainingLogView: View {
     
     @State var exercises: [TrainingExerciseModel] = dummyTrainingsExerciseModel
     
+    @State var showAddSheet = false
+    
     var body: some View
     {
         List {
@@ -18,7 +20,7 @@ struct TrainingLogView: View {
         .navigationTitle("Übungen")
         .listStyle(GroupedListStyle())
         .navigationBarItems(trailing:
-                                Button(action: {exercises.append(TrainingExerciseModel.dummyExercise)},
+                                Button(action:  {},
                                        label: {
             Image(systemName: "plus.circle.fill")
             Text("Add")
