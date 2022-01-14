@@ -27,7 +27,6 @@ struct TestView: View {
                 ExerciseView(exercise: ex)
             }
             
-            
             .navigationTitle("Testview")
         }
         
