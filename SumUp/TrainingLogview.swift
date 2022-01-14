@@ -6,6 +6,7 @@ struct TrainingLogView: View {
     
     @State var showAddSheet = false
     
+    
     var body: some View
     {
         List {
